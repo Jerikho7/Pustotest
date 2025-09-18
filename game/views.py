@@ -26,4 +26,3 @@ class PrizeListCreateView(generics.ListCreateAPIView):
 class LevelPrizeListCreateView(generics.ListCreateAPIView):
     queryset = LevelPrize.objects.select_related("level", "prize")
     serializer_class = LevelPrizeSerializer
-

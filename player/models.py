@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 
+
 class Player(models.Model):
     """
     Игрок системы.
@@ -10,7 +11,7 @@ class Player(models.Model):
             first_login (для аналитики).
             last_login (последний вход).
             points (количество очков).
-        """
+    """
 
     username = models.CharField(max_length=100, unique=True, verbose_name="Имя игрока")
     points = models.IntegerField(default=0, verbose_name="Количество очков игрока")
@@ -50,4 +51,3 @@ class Player(models.Model):
         self.last_login_date = today
         self.save()
         return amount
-

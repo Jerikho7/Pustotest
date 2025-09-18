@@ -4,7 +4,7 @@ from rest_framework.routers import DefaultRouter
 
 from player.views import LoginView
 from game.views import BoostListCreateView, LevelListCreateView, PrizeListCreateView, LevelPrizeListCreateView
-from progress.views import PlayerLevelViewSet, PlayerBoostViewSet, PlayerPrizeViewSet
+from progress.views import PlayerLevelViewSet, PlayerBoostViewSet, PlayerPrizeViewSet, PlayerProgressViewSet
 
 router = DefaultRouter()
 
@@ -21,6 +21,7 @@ router.register(r"level-prizes", LevelPrizeListCreateView)
 router.register(r"player-levels", PlayerLevelViewSet)
 router.register(r"player-boosts", PlayerBoostViewSet)
 router.register(r"player-prizes", PlayerPrizeViewSet)
+router.register(r"progress", PlayerProgressViewSet)
 
 urlpatterns = [
     path("admin/", admin.site.urls),

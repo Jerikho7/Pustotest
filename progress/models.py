@@ -1,6 +1,6 @@
 from django.db import models
 
-from game.models import Level, Prize, Boost, LevelPrize
+from game.models import Level, Prize, Boost
 from player.models import Player
 
 
