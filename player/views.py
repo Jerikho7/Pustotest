@@ -12,7 +12,7 @@ class LoginView(APIView):
         username = serializer.validated_data["username"]
 
         player, created = Player.objects.get_or_create(username=username)
-        points_added = player.add_points()
+        points_added = player.add_login_points()
 
         return Response(
             {
